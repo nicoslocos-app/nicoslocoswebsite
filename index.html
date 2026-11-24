@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111014">
+  <meta name="description" content="Nicoslocos. Uusi tapa analysoida, kehittää ja suunnitella ravintolamenuja. Tulossa pian.">
+  <link rel="canonical" href="https://www.nicoslocos.com/">
+  <link rel="icon" href="data:,">
+  <title>Nicoslocos | Coming soon</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --charcoal: #111014;
+      --white: #fcf9fd;
+      --description: #cdc2d0;
+      --lilac: #e2cbf1;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--charcoal);
+      color: var(--white);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body, p, h1 { margin: 0; }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      place-items: center;
+      min-block-size: 100vh;
+      min-block-size: 100dvh;
+      overflow: clip;
+      padding: 3rem 1.25rem;
+      padding-block: max(3rem, env(safe-area-inset-top)) max(3rem, env(safe-area-inset-bottom));
+      padding-inline: max(1.25rem, env(safe-area-inset-left)) max(1.25rem, env(safe-area-inset-right));
+      text-align: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: -8%;
+      background:
+        radial-gradient(ellipse 43% 51% at 55% 51%, #6c417455, transparent 100%),
+        radial-gradient(ellipse 41% 51% at 47% 38%, #6b50924a, transparent 100%),
+        radial-gradient(ellipse 59% 60% at 50% 50%, #35233d9e, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-content { min-inline-size: 0; }
+
+    .wordmark {
+      margin-block-end: clamp(2.25rem, 6.5vh, 4.25rem);
+      font-size: clamp(1.6rem, 3.2vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -.065em;
+      line-height: 1.1;
+    }
+
+    h1 {
+      max-inline-size: 26ch;
+      margin-inline: auto;
+      font-size: clamp(2.35rem, 6.9vw, 5.65rem);
+      font-weight: 720;
+      letter-spacing: -.065em;
+      line-height: 1.04;
+      text-wrap: balance;
+      overflow-wrap: anywhere;
+    }
+
+    .value {
+      margin-block-start: clamp(1.25rem, 3.2vh, 1.9rem);
+      font-size: clamp(1.13rem, 2.65vw, 1.55rem);
+      font-weight: 600;
+      line-height: 1.38;
+      letter-spacing: -.025em;
+      text-wrap: balance;
+    }
+
+    .description {
+      max-inline-size: 46ch;
+      margin: .65rem auto 0;
+      color: var(--description);
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      line-height: 1.6;
+      text-wrap: pretty;
+    }
+
+    .status {
+      display: inline-block;
+      margin-block-start: clamp(1.85rem, 4.6vh, 2.6rem);
+      border: 1px solid #dbb7f046;
+      border-radius: 999px;
+      padding: .55rem 1.05rem;
+      background: #c0a0d212;
+      color: var(--lilac);
+      font-size: .875rem;
+      font-weight: 550;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 38rem) {
+      .hero::before {
+        background:
+          radial-gradient(ellipse 71% 46% at 60% 53%, #6c417452, transparent 100%),
+          radial-gradient(ellipse 66% 43% at 42% 37%, #6b50924b, transparent 100%),
+          radial-gradient(ellipse 82% 57% at 50% 50%, #35233d9e, transparent 100%);
+      }
+      h1 {
+        max-inline-size: 13ch;
+        font-size: clamp(2rem, 11.35vw, 3.85rem);
+      }
+      .value { max-inline-size: 29ch; margin-inline: auto; }
+      .description { max-inline-size: 33ch; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero::before { animation: glow 24s ease-in-out infinite alternate; }
+      .hero-message { animation: appear 650ms ease-out both; }
+
+      @keyframes glow {
+        from { transform: translate(-1.4%, -1%); opacity: .92; }
+        to { transform: translate(1.4%, 1.15%); opacity: 1; }
+      }
+
+      @keyframes appear {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero" aria-labelledby="headline">
+    <div class="hero-content">
+      <p class="wordmark">nicoslocos</p>
+      <div class="hero-message">
+        <h1 id="headline" lang="en">Something better is coming.</h1>
+        <p class="value">Parempia menuja. Fiksumpia päätöksiä.</p>
+        <p class="description">Uusi tapa analysoida, kehittää ja suunnitella ravintolamenuja.</p>
+        <p class="status" lang="en">Coming soon</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
