@@ -1,2 +1,0 @@
-# nicoslocoswebsite
-nicoslocos website
